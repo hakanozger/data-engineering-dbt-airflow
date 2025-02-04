@@ -369,3 +369,205 @@ DETAIL:  Key (name)=(menu_access) already exists.
 [2025-02-04T00:30:52.717+0000] {logging_mixin.py:190} INFO - [2025-02-04T00:30:52.716+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-02-04T00:30:52.749+0000] {logging_mixin.py:190} INFO - [2025-02-04T00:30:52.749+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
 [2025-02-04T00:30:52.772+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.215 seconds
+[2025-02-04T01:19:32.106+0000] {processor.py:186} INFO - Started process (PID=165) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:19:32.108+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:19:32.114+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.113+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:19:32.164+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:19:32.439+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.438+0000] {override.py:1759} ERROR - Add Permission: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_name_uq"
+DETAIL:  Key (name)=(can_delete) already exists.
+
+[SQL: INSERT INTO ab_permission (name) VALUES (%(name)s) RETURNING ab_permission.id]
+[parameters: {'name': 'can_delete'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-02-04T01:19:32.444+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.443+0000] {override.py:1911} INFO - Created Permission View: None on DAG:data_pipeline
+[2025-02-04T01:19:32.453+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.452+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:data_pipeline
+[2025-02-04T01:19:32.458+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.458+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:data_pipeline
+[2025-02-04T01:19:32.463+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.463+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:data_pipeline
+[2025-02-04T01:19:32.468+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.468+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:data_pipeline
+[2025-02-04T01:19:32.473+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.473+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:data_pipeline
+[2025-02-04T01:19:32.479+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.478+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:data_pipeline
+[2025-02-04T01:19:32.479+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.479+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:19:32.492+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.492+0000] {dag.py:3262} INFO - Creating ORM DAG for data_pipeline
+[2025-02-04T01:19:32.493+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:19:32.493+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:19:32.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.411 seconds
+[2025-02-04T01:20:02.887+0000] {processor.py:186} INFO - Started process (PID=199) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:20:02.888+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:20:02.892+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:20:02.892+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:20:02.925+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:20:02.975+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:20:02.974+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:20:02.991+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:20:02.991+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:20:03.010+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.133 seconds
+[2025-02-04T01:20:33.381+0000] {processor.py:186} INFO - Started process (PID=212) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:20:33.382+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:20:33.385+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:20:33.385+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:20:33.412+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:20:33.447+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:20:33.447+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:20:33.464+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:20:33.463+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:20:33.485+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.113 seconds
+[2025-02-04T01:21:03.807+0000] {processor.py:186} INFO - Started process (PID=222) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:21:03.808+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:21:03.813+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:21:03.813+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:21:03.839+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:21:03.875+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:21:03.874+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:21:03.891+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:21:03.891+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:21:03.912+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.112 seconds
+[2025-02-04T01:21:34.360+0000] {processor.py:186} INFO - Started process (PID=232) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:21:34.363+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:21:34.366+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:21:34.365+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:21:34.396+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:21:34.439+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:21:34.439+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:21:34.453+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:21:34.453+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:21:34.472+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.120 seconds
+[2025-02-04T01:22:04.740+0000] {processor.py:186} INFO - Started process (PID=242) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:22:04.741+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:22:04.745+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:22:04.744+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:22:04.770+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:22:04.805+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:22:04.805+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:22:04.818+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:22:04.818+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:22:04.834+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.101 seconds
+[2025-02-04T01:22:35.178+0000] {processor.py:186} INFO - Started process (PID=252) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:22:35.179+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:22:35.181+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:22:35.181+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:22:35.201+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:22:35.232+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:22:35.232+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:22:35.248+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:22:35.248+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:22:35.265+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.094 seconds
+[2025-02-04T01:23:05.600+0000] {processor.py:186} INFO - Started process (PID=262) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:23:05.601+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:23:05.606+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:23:05.606+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:23:05.637+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:23:05.678+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:23:05.678+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:23:05.697+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:23:05.697+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:23:05.721+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.132 seconds
+[2025-02-04T01:23:36.122+0000] {processor.py:186} INFO - Started process (PID=272) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:23:36.123+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:23:36.126+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:23:36.126+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:23:36.146+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:23:36.173+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:23:36.173+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:23:36.189+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:23:36.189+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:23:36.389+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.273 seconds
+[2025-02-04T01:24:06.765+0000] {processor.py:186} INFO - Started process (PID=282) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:24:06.769+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:24:06.772+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:24:06.771+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:24:06.801+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:24:06.844+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:24:06.843+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:24:06.993+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:24:06.993+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:24:07.012+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.258 seconds
+[2025-02-04T01:24:37.442+0000] {processor.py:186} INFO - Started process (PID=292) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:24:37.443+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:24:37.447+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:24:37.447+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:24:37.474+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:24:37.732+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:24:37.732+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:24:37.751+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:24:37.751+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:24:37.779+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.346 seconds
+[2025-02-04T01:25:08.176+0000] {processor.py:186} INFO - Started process (PID=302) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:25:08.177+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:25:08.181+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:25:08.181+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:25:08.324+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:25:08.351+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:25:08.351+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:25:08.362+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:25:08.362+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:25:08.387+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.220 seconds
+[2025-02-04T01:25:38.631+0000] {processor.py:186} INFO - Started process (PID=312) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:25:38.633+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:25:38.636+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:25:38.635+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:25:38.657+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:25:38.691+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:25:38.691+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:25:38.708+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:25:38.708+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:25:38.729+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.106 seconds
+[2025-02-04T01:26:09.108+0000] {processor.py:186} INFO - Started process (PID=322) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:26:09.110+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:26:09.115+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:26:09.115+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:26:09.136+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:26:09.177+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:26:09.177+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:26:09.197+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:26:09.197+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:26:09.221+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.123 seconds
+[2025-02-04T01:26:39.558+0000] {processor.py:186} INFO - Started process (PID=332) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:26:39.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:26:39.563+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:26:39.563+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:26:39.581+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:26:39.612+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:26:39.612+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:26:39.627+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:26:39.626+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:26:39.647+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.096 seconds
+[2025-02-04T01:27:10.032+0000] {processor.py:186} INFO - Started process (PID=342) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:27:10.033+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:27:10.037+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:27:10.036+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:27:10.056+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:27:10.090+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:27:10.090+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:27:10.106+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:27:10.105+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:27:10.123+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.098 seconds
+[2025-02-04T01:27:40.392+0000] {processor.py:186} INFO - Started process (PID=352) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:27:40.394+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:27:40.398+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:27:40.397+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:27:40.435+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:27:40.477+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:27:40.477+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:27:40.497+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:27:40.497+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:27:40.520+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.137 seconds
+[2025-02-04T01:28:10.923+0000] {processor.py:186} INFO - Started process (PID=362) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:28:10.924+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:28:10.928+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:28:10.927+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:28:10.949+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:28:10.985+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:28:10.985+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:28:11.001+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:28:11.001+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:28:11.025+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.111 seconds
+[2025-02-04T01:34:46.895+0000] {processor.py:186} INFO - Started process (PID=165) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:34:46.899+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:34:46.914+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:46.913+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:34:46.978+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:34:47.267+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.267+0000] {override.py:1759} ERROR - Add Permission: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_name_uq"
+DETAIL:  Key (name)=(can_read) already exists.
+
+[SQL: INSERT INTO ab_permission (name) VALUES (%(name)s) RETURNING ab_permission.id]
+[parameters: {'name': 'can_read'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-02-04T01:34:47.274+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.273+0000] {override.py:1911} INFO - Created Permission View: None on DAG:data_pipeline
+[2025-02-04T01:34:47.280+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.280+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:data_pipeline
+[2025-02-04T01:34:47.286+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.286+0000] {override.py:1759} ERROR - Add Permission: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "ab_permission_name_uq"
+DETAIL:  Key (name)=(can_delete) already exists.
+
+[SQL: INSERT INTO ab_permission (name) VALUES (%(name)s) RETURNING ab_permission.id]
+[parameters: {'name': 'can_delete'}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2025-02-04T01:34:47.290+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.290+0000] {override.py:1911} INFO - Created Permission View: None on DAG:data_pipeline
+[2025-02-04T01:34:47.300+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.300+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:data_pipeline
+[2025-02-04T01:34:47.306+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.306+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:data_pipeline
+[2025-02-04T01:34:47.320+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.320+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:data_pipeline
+[2025-02-04T01:34:47.328+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.327+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:data_pipeline
+[2025-02-04T01:34:47.331+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.331+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:34:47.343+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.343+0000] {dag.py:3262} INFO - Creating ORM DAG for data_pipeline
+[2025-02-04T01:34:47.344+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:34:47.344+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:34:47.361+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.476 seconds
+[2025-02-04T01:35:17.720+0000] {processor.py:186} INFO - Started process (PID=212) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:35:17.722+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:35:17.730+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:35:17.728+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:35:17.764+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:35:17.821+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:35:17.821+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:35:17.844+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:35:17.844+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:35:17.874+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.166 seconds
+[2025-02-04T01:35:48.333+0000] {processor.py:186} INFO - Started process (PID=225) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:35:48.335+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:35:48.341+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:35:48.340+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:35:48.377+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:35:48.428+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:35:48.428+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:35:48.451+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:35:48.451+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:35:48.471+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.147 seconds
+[2025-02-04T01:36:18.680+0000] {processor.py:186} INFO - Started process (PID=252) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:36:18.681+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:36:18.684+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:36:18.684+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:36:18.707+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:36:18.754+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:36:18.754+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:36:18.774+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:36:18.773+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:36:18.795+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.124 seconds
+[2025-02-04T01:36:49.211+0000] {processor.py:186} INFO - Started process (PID=279) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:36:49.214+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:36:49.218+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:36:49.217+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:36:49.243+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:36:49.282+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:36:49.281+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:36:49.299+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:36:49.299+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:36:49.321+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.120 seconds
+[2025-02-04T01:37:19.722+0000] {processor.py:186} INFO - Started process (PID=289) to work on /opt/airflow/dags/example_dag.py
+[2025-02-04T01:37:19.723+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/example_dag.py for tasks to queue
+[2025-02-04T01:37:19.726+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:37:19.726+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:37:19.746+0000] {processor.py:925} INFO - DAG(s) 'data_pipeline' retrieved from /opt/airflow/dags/example_dag.py
+[2025-02-04T01:37:19.778+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:37:19.778+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-02-04T01:37:19.795+0000] {logging_mixin.py:190} INFO - [2025-02-04T01:37:19.794+0000] {dag.py:4180} INFO - Setting next_dagrun for data_pipeline to None, run_after=None
+[2025-02-04T01:37:19.812+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/example_dag.py took 0.098 seconds

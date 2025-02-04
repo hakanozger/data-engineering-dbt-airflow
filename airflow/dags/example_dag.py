@@ -5,6 +5,7 @@ import requests
 
 def generate_sample_data():
     url = "http://flask-api:5001/generate"
+    requests.post(url)
 
 default_args = {
     'owner': 'airflow',
